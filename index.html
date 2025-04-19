@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Web Design</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="home">
+        <div>
+            <a href="#overview">Overview</a>
+            <a href="#flex-container">Flexbox Layout</a>
+            <a href="#grid-container">Grid Layout</a>
+            <a href="#media">Media Queries</a>
+        </div>
+    </nav>
+    <div id="overview">
+        <h1>Responsive Web Design Overview</h1>
+        <p>
+            Responsive web design ensures that your website adapts seamlessly to different screen sizes and orientations
+            providinga user friendly experience on all devices.
+        </p>
+        <p>
+            It is an important user experience design principle, making sure your site works across multiple devices.
+        </p>
+        <p>
+            The core design concepts for responsive web design include:
+            <ul>
+                <li> Fluid Layout: Uses relative units like percentages to make layouts adjust dynamically.</li>
+                <li>Fexible Media: Make videos, images and other media scale proportionally to fit their containers.</li>
+                <li>Media Queries: Makes it possible to apply styles based on specific conditions such as the screen size, resolution or orientation of the device. They are conditional CSS rules.</li>
+                <li>Mobile-First Design: Start designing for smaller screens first then add styles for larger screens using media queries.</li>
+                <li>Flexbox Layout: It aligns, distribute and space elements within a container.</li>
+            </ul>
+        </p>
+    </div>
+
+    <div id="flex-container">
+        <table border="1" class = "tbl">
+            <caption>Flexbox Properties</caption>
+            <thead>
+                <tr>
+                    <th>Property</th>
+                    <th>Description/Attributes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>display: flex</td>
+                    <td>Activates flexbox</td>
+                </tr>
+                <tr>
+                    <td>flex-direction: row|column|row-reverse|column-reverse</td>
+                    <td>Sets Layout direction</td>
+                </tr>
+                <tr>
+                    <td>justify-content</td>
+                    <td>Aligns content horizontally</td>
+                </tr>
+                <tr>
+                    <td>align-items:</td>
+                    <td>Aligns content vertically</td>
+                </tr>
+                <tr>
+                    <td>flex-wrap:</td>
+                    <td>Wraps content to next line if it doesn't fit in one line</td>
+                </tr>
+                <tr>
+                    <td>flex-grow:</td>
+                    <td>Allows items to grow and take available space</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="grid-container">
+        <table class = "tbl" border="1">
+            <caption>Grid Layout Properties</caption>
+            <thead>
+                <tr>
+                    <th>Property</th>
+                    <th>Description/Attributes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>display: grid</td>
+                    <td>Activates grid layout</td>
+                </tr>
+                <tr>
+                    <td>grid-template-columns</td>
+                    <td>Define columns structure</td>
+                </tr>
+                <tr>
+                    <td>grid-template-rows</td>
+                    <td>Define rows structure</td>
+                </tr>
+                <tr>
+                    <td>grid-gap</td>
+                    <td>Adds spaces between grid items</td>
+                </tr>
+                <tr>
+                    <td>grid-template-areas</td>
+                    <td>Defines areas in grid layout</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="media">
+        <h2>Media Queries</h2>
+        <p>Media queries are conditional CSS rules that enable you to apply CSS styles based on specific conditions such as screen sizes, resolution or orientation of the device. They ask the device for information such as its width and apply styles if the conditions are met.</p>
+        <p>Syntax: @media(condition){/*CSS rule*/}</p>
+        <h3>Types of Media Queries:</h3>
+        <ol>
+            <li>Max-Width Media Query: Target screens smaller than specified width.<br>
+                Example:<br>@media(max-width:760px){
+                    p{
+                        font-size: 18px;
+                    }
+    
+                }
+            </li>
+            <li>Min-Width Media Query: Targets screens larger than a specific width.<br>
+                Example:<br>@media(min-width:760px){
+                p{
+                    font-size: 18px;
+                }
+
+                }
+            </li>
+            <li>Combined Media Queries: Combines multiple Conditions with logical operators such as AND,OR, NOT.<br>
+                Example: @media(Min-Width: 600px) and (orientation:portrait){
+                p{
+                    font-size:16px;
+                }
+                    }
+            </li>
+        </ol>
+        <h3>Common Media Query Conditions:</h3>
+        <ol type ="i">
+            <li>
+                Width and height: Target devices based on their viewport dimensions.<br>
+                Example:<br>@media(max-width: 480px){
+                    /*Phones*/
+                }<br>
+                @media(min-width: 481px) and (max-width: 1024px){
+                    /*Tablets*/
+                }<br>
+                @media(min-width: 1025px){
+                    /*Desktops*/
+                }
+            </li>
+            <li>
+                Orientation: Apply styles based on device orientation.<br>
+                Example:<br>@media(orientation: landscape){
+
+                }<br>@media(orientation: portrait){
+
+                }
+
+            </li>
+            <li>
+                Resolution: Target devices with specific resolutions.<br>
+                Example:<br>@media(min-resolution: 300dpi){
+                    body{
+                        font-size: 18px;
+                    }
+                }
+            </li>
+            <li>
+                Aspect-ratio: Use aspect ratio for responsive designs e.g., widescreen and square screens.<br>
+                Example:<br>@media(aspect-ratio:16/9){
+                    video{
+                        width:100%;
+                    }
+                }
+            </li>
+            <li>
+                Hover: Detect devices with hover capabilities e.g., mouse.<br>
+                Example:<br>@media(hover:hover){
+                    button.hover{
+                        background-color: Orange;
+                    }
+                }
+            </li>
+        </ol>
+    </div>
+    
+</body>
+<footer>
+    KELVIN KIBET KOECH
+    &copy; 2025
+</footer>
+</html>

@@ -1,0 +1,124 @@
+.home{
+    background-color: rgb(153, 219, 219);
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    display: flex;
+    float: right;
+    cursor: pointer;
+    border: none;
+    margin-right: 0 auto;
+}
+body{
+    margin-right: 1%;
+    margin-left: 1%;
+    line-height: 1.5;
+    justify-content: center;
+}
+.home{
+    background-color: rgb(153, 219, 219);
+    padding-bottom: 1%;
+    padding-top: 1%;
+    margin-right: -1%;
+    margin-left: -1%;
+    margin-top: -1%;
+
+}
+a{
+    text-decoration: none;
+    padding: 10px;
+}
+
+a:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px lime;
+}
+.tbl{
+    border-collapse: collapse;
+    text-align: center;
+}
+th,td{
+    border: 2px solid black;
+}
+th{
+    background-color: darkgoldenrod;
+}
+caption{
+    font-weight: bold;
+    font-size: 20px;
+}
+#overview,#media{
+    width: 100%;   /*Fluid Layout*/
+    margin: 0 auto;  /*Align to center*/
+    padding: 2%;
+}
+
+/* Media queries*/
+@media (max-width:480px){
+    body{
+        background-color: grey
+    }
+    footer{
+        background-color: grey;
+        width: 100%;
+        text-align: center;
+        color: white;
+    }
+    #Home{
+        width: 100%;
+        background-color: lime;
+        display: flex;
+        align-items: left;
+        flex-direction: column;
+
+    }
+}
+@media (min-width:481px) and (max-width:1024px){
+    body{
+        background-color: lightyellow;
+    }
+    footer{
+        background-color: grey;
+        width: 100%;
+        text-align: center;
+        color: white;
+    }
+    #Home{
+        width: 100%;
+        background-color: lightsalmon;
+        display: flex;
+        align-items: left;
+        flex-direction: column-reverse;
+
+    }
+}
+@media (min-width:1025px){
+    body{
+        background-color: lightcyan;
+    }
+    footer{
+            background-color: grey;
+            width: 100%;
+            text-align: center;
+            color: white;
+        
+    }
+    #Home{
+        width: 100%;
+        background-color: royalblue;
+        display: flex;
+        align-items: right;
+        flex-direction: row-reverse;
+
+    }
+}
+
+/* Flexbox Layout*/
+#flex-container,#grid-container{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 2%;
+    height: 2%;
+    margin: 0 auto;
+}
